@@ -88,7 +88,6 @@ function allImagesTemp(arr) {
 const markup = allImagesTemp(images);
 galleryEl.insertAdjacentHTML('afterbegin', markup);
 
-// Initialize Simple Lightbox
 const lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
   captionsData: 'alt',
