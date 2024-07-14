@@ -3,7 +3,6 @@ let formData = { email: '', message: '' };
 
 const feedbackFormRef = document.querySelector('.feedback-form');
 
-// Load data from local storage on page load
 document.addEventListener('DOMContentLoaded', () => {
   const userData = loadFromLs(STORAGE_KEY);
 
@@ -14,13 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Handle input event to update formData and save to local storage
 feedbackFormRef.addEventListener('input', e => {
   formData[e.target.name] = e.target.value;
   saveToLs(STORAGE_KEY, formData);
 });
 
-// Handle form submission
 feedbackFormRef.addEventListener('submit', e => {
   e.preventDefault();
 
